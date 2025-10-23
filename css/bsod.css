@@ -39,6 +39,7 @@ body {
   color: #FFF;
   background: #9E1B32;
   margin: 0;
+  overflow: hidden;
 }
 
 main {
@@ -66,4 +67,5 @@ footer small {
   width: 128px;
   margin-top: 2em;
   filter: brightness(0) invert(1);
+  overflow: hidden;
 }
