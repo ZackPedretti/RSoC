@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
   font-family: "Segoe UI";
   color: #FFF;
-  background: #106faa;
+  background: #9E1B32;
   margin: 0;
 }
 
@@ -59,4 +59,11 @@ main {
 
 footer small {
   font-size: 0.8em;
+}
+
+.croissant {
+  height: 128px;
+  width: 128px;
+  margin-top: 2em;
+  filter: brightness(0) invert(1);
 }
