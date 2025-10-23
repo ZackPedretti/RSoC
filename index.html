@@ -42,7 +42,7 @@
     let progress = 0;
 
     function updateProgress() {
-      progress = Math.max(progress + Math.round(Math.random() * 5), 100);
+      progress = Math.min(progress + Math.round(Math.random() * 5), 100);
 
       if (el) {
         el.innerText = progress;
