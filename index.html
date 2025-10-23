@@ -42,11 +42,15 @@
     let progress = 0;
 
     function updateProgress() {
-      progress += Math.round(Math.random() * 5);
+      progress = Math.max(progress + Math.round(Math.random() * 5), 100);
+
       if (el) {
         el.innerText = progress;
       }
-      setTimeout(() => updateProgress(), UPDATE_DELAY);
+
+      if (progress < 100) {
+        setTimeout(() => updateProgress(), UPDATE_DELAY);
+      }
     }
 
     updateProgress();
