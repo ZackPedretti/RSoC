@@ -31,24 +31,25 @@
 
   </body>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
   <script src="js/qrcode.js"></script>
 
   <script src="js/bsod.js"></script>
 
-  <script type="text/javascript">function update_progress() {
+  <script type="text/javascript" module>
+    const el = document.getElementById('progress');
+    const UPDATE_DELAY = 3000;
 
-    $.ajax(
-      {
-        url: "https://api.amanoteam.com/getpercentage/",
+    let progress = 0;
+
+    function updateProgress() {
+      progress += Math.round(Math.random() * 5);
+      if (el) {
+        el.innerText = progress;
       }
-    ).done(function(data) {
-      document.getElementById('progress').innerHTML = data;
-    });
-    setTimeout(update_progress, 10000);
-}
+      setTimeout(() => updateProgress(), UPDATE_DELAY);
+    }
 
-update_progress();</script>
+    updateProgress();
+  </script>
 
 </html>
